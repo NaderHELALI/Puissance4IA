@@ -14,10 +14,10 @@ nbColums=12
 nbCoupMax=30
 
 #Couleur
-Bleu=(0,0,254)
+Bleu=(0,0,255)
 Noir=(0,0,0)
 Rouge=(255,0,0)
-Jaune=(244,244,0)
+Jaune=(255,255,0)
 ###Gestion du jeu : 
 
 #Choix de la main Joueur/ AI
