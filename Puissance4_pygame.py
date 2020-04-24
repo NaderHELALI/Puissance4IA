@@ -14,7 +14,7 @@ nbColums=12
 nbCoupMax=30
 
 #Couleur
-Bleu=(0,0,255)
+Bleu=(0,0,254)
 Noir=(0,0,0)
 Rouge=(255,0,0)
 Jaune=(255,255,0)
