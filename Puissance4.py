@@ -105,12 +105,12 @@ def heuristique(rectange, piece):
 	if rectange.count(piece) == 4:
 		score += 100
 	elif rectange.count(piece) == 3 and rectange.count(case_vide) == 1:
-		score += 5
+		score += 25
 	elif rectange.count(piece) == 2 and rectange.count(case_vide) == 2:
-		score += 2
+		score += 10
 
 	if rectange.count(opp_piece) == 3 and rectange.count(case_vide) == 1:
-		score -= 4
+		score -= 20
 
 	return score
 
