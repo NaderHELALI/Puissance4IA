@@ -7,7 +7,7 @@ import pygame
 import random
 import math
 
-
+1
 #Taille du jeu
 nbRow=6
 nbColums=12

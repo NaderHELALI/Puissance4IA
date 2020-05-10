@@ -161,7 +161,7 @@ def all_col_jouable(board):
 #On recupère la meilleur colonne apres la simulation 
 def best_move(board, piece):
 	valid_locations = (board)
-	best_score = -10000
+	best_score = -math.inf
 	best_col = random.choice(valid_locations)
 	for col in valid_locations:
 		row = ligne_jouable(board, col)
@@ -189,14 +189,14 @@ def minimax(board, depth, alpha, beta, maximizingPlayer,current_coup):
 	if depth == 0 or is_terminal:
 		if is_terminal:
 			if coup_gagnant(board, AI_PIECE):
-				return (None, 100000000000000)
+				return (None, math.inf)
 			elif coup_gagnant(board, PLAYER_PIECE):
-				return (None, -10000000000000)
+				return (None, -math.inf)
 			else: # Plus de jetons pour jouer respect des contraintes
 				return (None, 0)
 		else: # si ce n'est pas fini
 			return (None, score_position(board, AI_PIECE))
-    # Minimizing player
+    # Maximise player
 	if maximizingPlayer:
 		value = -math.inf
 		column = random.choice(valid_locations)
@@ -212,8 +212,8 @@ def minimax(board, depth, alpha, beta, maximizingPlayer,current_coup):
 			if alpha >= beta:
 				break
 		return column,value
-
-	else: # Minimizing player
+	#minimizing player 
+	else: 
 		value = math.inf
 		column = random.choice(valid_locations)
 		for col in valid_locations:
