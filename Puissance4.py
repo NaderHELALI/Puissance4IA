@@ -103,7 +103,7 @@ def heuristique(rectange, piece):
 		opp_piece = AI_PIECE
 
 	if rectange.count(piece) == 4:
-		score += 100
+		score += 120
 	elif rectange.count(piece) == 3 and rectange.count(case_vide) == 1:
 		score += 25
 	elif rectange.count(piece) == 2 and rectange.count(case_vide) == 2:
@@ -111,6 +111,7 @@ def heuristique(rectange, piece):
 
 	if rectange.count(opp_piece) == 3 and rectange.count(case_vide) == 1:
 		score -= 20
+	
 
 	return score
 
@@ -171,7 +172,6 @@ def best_move(board, piece):
 		if score > best_score:
 			best_score = score
 			best_col = col
-
 	return best_col
 
 #Regarde sur quel ligne de la colonne on peut jouer
@@ -244,7 +244,7 @@ def puissance4():
             
         else :
             col_choise=minimax(tableau,4,-math.inf,math.inf,True,current_coup)[0]
-            print(f"L'IA a joué la colonne {col_choise}")
+            print(f"L'IA a joué la colonne {col_choise+1}")
             ajouterPiece(tableau,col_choise,player)
             
         print(tableau)
